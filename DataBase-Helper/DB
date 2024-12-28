@@ -20,8 +20,10 @@ MAP(SOURCE,DESTINATION)
 ---------------------------------------
 
 WE USE DAOS NOTMALLY TO CONNECT TO DB AND SAVE AND RETRIVE 
-
-
+IN BOOT WE DONT CONFIG EVERYTIME WE JUST USE AUTOWIRED AND IT INJECTS
+---------------------------------------------------------------
+@TRANSACTIONAL
+IT MANAGES ROLLBACK IF ANY EXCEPTION RAISED IF USED ON FUNCTION 
 ---------------------------------------------------------------
 1) SPRING BOOT GIVES INBUILT DAO , WE CAN JUST EXTEND IT IN OUR DAO
 
@@ -43,6 +45,12 @@ NOTE: BOOT CREATES A IMPLEMENTING CLASS OF THE INTERFACE AND INJECTS IT UNDER TH
 2) CAN ALSO DO DB OPERATIONS BY USING 
 
 -JDBC TEMPLATE IN OUR DAO
+OPERATIONS :
+Query for a single object using queryForObject().
+Query for a list of objects using queryForList().
+Query for multiple rows and map to objects using query().
+Execute a SQL update (INSERT, UPDATE, DELETE) using update().
+Batch update multiple records using batchUpdate().
 
 ---------------------------------------------------------------
 3) CAN ALSO DO DB BY  USING  ENTITY MANAGER
